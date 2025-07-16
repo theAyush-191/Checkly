@@ -28,7 +28,10 @@
 
 ## 📸 Screenshots
 
-<img width="300" alt="Category List" src="https://github.com/user-attachments/assets/e5bb81f6-0541-4a60-90df-9210866094e0" />|<img width="300" alt="To-Do List" src="https://github.com/user-attachments/assets/dbbb0c8b-f64b-4995-b001-2f5e28afd680" />|<img width="300" alt="Delete Feature" src="https://github.com/user-attachments/assets/041444da-6aa4-44eb-84fd-91332d46d334" />|
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/e95db149-6c47-45e7-9e58-21aecc647ff8" />
+|<img width="300" alt="Simulator Screenshot - iPhone 16 Pro - 2025-07-16 at 21 38 57" src="https://github.com/user-attachments/assets/e65d9513-5852-4bad-b6ee-28637bf76acd" />
+|<img width="300" alt="image" src="https://github.com/user-attachments/assets/baff6e78-548a-4b7e-b85c-aa59427e907a" />
+|
 
 ---
 
