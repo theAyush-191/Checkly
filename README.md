@@ -29,7 +29,8 @@
 
 | Category List | Tasks Under Category |
 |---------------|-----------------------|
-| ![Categories](./Screenshot%202025-07-16%20at%209.12.09%E2%80%AFPM.png) | ![Tasks](./Screenshot%202025-07-16%20at%209.12.22%E2%80%AFPM.png) |
+| ![Categories](<img width="324" height="690" alt="Screenshot 2025-07-16 at 9 12 22 PM" src="https://github.com/user-attachments/assets/13e0250e-98cf-446b-987f-c053c8168965" />
+) | ![Tasks](./Screenshot%202025-07-16%20at%209.12.22%E2%80%AFPM.png) |
 
 ---
 
