@@ -6,6 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A9A6A2152E2810DF000AF0EA /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9A6A2142E2810DF000AF0EA /* SwipeCellKit */; };
+		A9A6A2182E2810F5000AF0EA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A9A6A2172E2810F5000AF0EA /* RealmSwift */; };
+		A9A6A2192E281104000AF0EA /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A9A6A2172E2810F5000AF0EA /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9A6A21A2E281104000AF0EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9A6A2192E281104000AF0EA /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A952E7D02E16EF4C008D072F /* Checkly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A6A2182E2810F5000AF0EA /* RealmSwift in Frameworks */,
+				A9A6A2152E2810DF000AF0EA /* SwipeCellKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 				A952E7CC2E16EF4C008D072F /* Sources */,
 				A952E7CD2E16EF4C008D072F /* Frameworks */,
 				A952E7CE2E16EF4C008D072F /* Resources */,
+				A9A6A21A2E281104000AF0EA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -78,6 +101,8 @@
 			);
 			name = Checkly;
 			packageProductDependencies = (
+				A9A6A2142E2810DF000AF0EA /* SwipeCellKit */,
+				A9A6A2172E2810F5000AF0EA /* RealmSwift */,
 			);
 			productName = Checkly;
 			productReference = A952E7D02E16EF4C008D072F /* Checkly.app */;
@@ -107,6 +132,10 @@
 			);
 			mainGroup = A952E7C72E16EF4C008D072F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A9A6A2132E2810DF000AF0EA /* XCRemoteSwiftPackageReference "SwipeCellKit" */,
+				A9A6A2162E2810F5000AF0EA /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A952E7D12E16EF4C008D072F /* Products */;
 			projectDirPath = "";
@@ -337,6 +366,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9A6A2132E2810DF000AF0EA /* XCRemoteSwiftPackageReference "SwipeCellKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwipeCellKit/SwipeCellKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		A9A6A2162E2810F5000AF0EA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9A6A2142E2810DF000AF0EA /* SwipeCellKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9A6A2132E2810DF000AF0EA /* XCRemoteSwiftPackageReference "SwipeCellKit" */;
+			productName = SwipeCellKit;
+		};
+		A9A6A2172E2810F5000AF0EA /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9A6A2162E2810F5000AF0EA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A952E7C82E16EF4C008D072F /* Project object */;
 }

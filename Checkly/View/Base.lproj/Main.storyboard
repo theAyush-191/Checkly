@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T1U-tD-l56">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Checkly-->
+        <!--Items-->
         <scene sceneID="7gU-EP-RW1">
             <objects>
                 <tableViewController id="QHx-s8-QCe" customClass="ToDoListViewController" customModule="Checkly" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,9 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="690"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="caX-45-dxl">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="QHx-s8-QCe" id="K1e-Wx-wxj"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier=" ToDoItemCell" id="cIy-U7-HXO">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" id="cIy-U7-HXO">
+                                <rect key="frame" x="0.0" y="94" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cIy-U7-HXO" id="7dW-6C-pDP">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -30,17 +39,20 @@
                             <outlet property="delegate" destination="QHx-s8-QCe" id="6tg-8v-DSx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checkly" id="iWp-d5-Ru5">
+                    <navigationItem key="navigationItem" title="Items" id="iWp-d5-Ru5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hjN-h1-RPz">
                             <connections>
                                 <action selector="addButtonPressed:" destination="QHx-s8-QCe" id="rDw-U7-Fx9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="caX-45-dxl" id="OVd-lG-MNH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gei-2D-gai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860.3053435114502" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="2724" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="khX-FJ-mub">
@@ -59,12 +71,50 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="QHx-s8-QCe" kind="relationship" relationship="rootViewController" id="3hy-Va-0tV"/>
+                        <segue destination="8hx-1L-el8" kind="relationship" relationship="rootViewController" id="NFw-ni-GXe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAI-ZV-pkg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="933.58778625954199" y="-27.464788732394368"/>
+        </scene>
+        <!--Checkly-->
+        <scene sceneID="Oef-tI-nnW">
+            <objects>
+                <tableViewController id="8hx-1L-el8" customClass="CategoryViewController" customModule="Checkly" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xoQ-qb-pfV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="690"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryItemCell" id="YFk-kM-LiT" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YFk-kM-LiT" id="gbC-EA-IpC">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8hx-1L-el8" id="6Gu-v1-742"/>
+                            <outlet property="delegate" destination="8hx-1L-el8" id="erk-dq-vNU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Checkly" id="vfo-o0-Tlx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NgY-4a-Pwb">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="8hx-1L-el8" id="KnC-04-SDV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="QHx-s8-QCe" kind="show" identifier="goToItem" id="JLl-EC-rTW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcd-hB-SW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.7633587786258" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
