@@ -28,10 +28,7 @@
 
 ## 📸 Screenshots
 
-|---------------|-----------------------|----------------------------|
-|<img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/e5bb81f6-0541-4a60-90df-9210866094e0" />
-|<img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/dbbb0c8b-f64b-4995-b001-2f5e28afd680" />
-|<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2025-07-16 at 21 38 57" src="https://github.com/user-attachments/assets/041444da-6aa4-44eb-84fd-91332d46d334" />|
+<img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/e5bb81f6-0541-4a60-90df-9210866094e0" />|<img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/dbbb0c8b-f64b-4995-b001-2f5e28afd680" />|<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2025-07-16 at 21 38 57" src="https://github.com/user-attachments/assets/041444da-6aa4-44eb-84fd-91332d46d334" />|
 
 ---
 
