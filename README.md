@@ -1,6 +1,6 @@
 # ✅ Checkly
 
-**Checkly** is a simple and intuitive To-Do list app built using **Swift**, **UIKit**, and **Core Data**. It helps users organize tasks into categories and manage them with ease. Ideal for learning how to implement lists, navigation controllers, and persistent local storage in iOS.
+**Checkly** is a simple and intuitive To-Do list app built using **Swift**, **UIKit**, and **Realm**. It helps users organize tasks into categories and manage them with ease. Ideal for learning how to implement lists, navigation controllers, and persistent local storage in iOS.
 
 ---
 
@@ -9,6 +9,7 @@
 - Add multiple to-do categories (e.g., "Home", "Work", "Harry Potter" 😉)
 - Add tasks inside each category
 - Mark tasks as complete or incomplete
+- Delete categories and tasks
 - Local storage using Core Data
 - Minimalist, clean UI with a native iOS feel
 
@@ -18,7 +19,7 @@
 
 - `Swift`
 - `UIKit`
-- `Core Data`
+- `Realm`
 - `UITableViewController`
 - `UINavigationController`
 - `UIAlertController`
@@ -27,10 +28,10 @@
 
 ## 📸 Screenshots
 
-| Category List | Tasks Under Category |
-|---------------|-----------------------|
-| ![Categories](<img width="324" height="690" alt="Screenshot 2025-07-16 at 9 12 22 PM" src="https://github.com/user-attachments/assets/13e0250e-98cf-446b-987f-c053c8168965" />
-) | ![Tasks](./Screenshot%202025-07-16%20at%209.12.22%E2%80%AFPM.png) |
+|---------------|-----------------------|----------------------------|
+|<img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/e5bb81f6-0541-4a60-90df-9210866094e0" />
+|<img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/dbbb0c8b-f64b-4995-b001-2f5e28afd680" />
+|<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2025-07-16 at 21 38 57" src="https://github.com/user-attachments/assets/041444da-6aa4-44eb-84fd-91332d46d334" />|
 
 ---
 
@@ -38,7 +39,7 @@
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/yourusername/Checkly.git
+   git clone https://github.com/theAyush-191/Checkly.git
    ```
 
 2. Open the `.xcodeproj` file in Xcode  
@@ -54,7 +55,7 @@
 
 - Building dynamic `UITableView` with data source and delegate methods
 - Navigating between views using `UINavigationController`
-- Using `Core Data` to persist user-generated data
+- Using `Realm` to persist user-generated data
 - Adding alerts, text fields, and local interactions
 - Designing UI with Storyboard and Auto Layout
 
@@ -62,8 +63,6 @@
 
 ## 📌 Future Improvements
 
-- Add checkmark toggle UI
-- Swipe to delete tasks
 - Dark mode support
 - Cloud sync using iCloud or Firebase
 
@@ -77,4 +76,4 @@ I'm an aspiring iOS Developer currently learning Swift, UIKit, and DSA with C++.
 
 ## 📫 Contact
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/yourprofile) or email me at `youremail@example.com`.
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ayushsingh-tech/) or email me at `ayush191.znr@gmail.com`.
