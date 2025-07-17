@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import CoreData
 import RealmSwift
 
-class ToDoListViewController: UITableViewController {
+class ToDoListViewController: SwipeViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -46,7 +45,7 @@ class ToDoListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        let cell=super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item=itemsList?[indexPath.row]{
             cell.textLabel?.text=item.title
@@ -124,6 +123,9 @@ class ToDoListViewController: UITableViewController {
             itemTextField=alertTextField
         }
         
+        let cancel=UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(cancel)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
@@ -190,7 +192,53 @@ class ToDoListViewController: UITableViewController {
         //
     }
     
+    override func deleteItem(at indexPath: IndexPath) {
+        if let itemDelete=itemsList?[indexPath.row]{
+            do{
+                try realm.write{
+                    realm.delete(itemDelete)
+                }
+            }catch{
+                    print("Error deleting Item: \(error)")
+                }
+            }
+        }
+    
+    override func editItem(at indexPath: IndexPath, onCancel: @escaping () -> Void) {
+        if let item=self.itemsList?[indexPath.row]{
+            let alert=UIAlertController(title: "Edit To-Do", message: "", preferredStyle: .alert)
+            var textField=UITextField()
+            
+            alert.addTextField{ alertTextField in
+                alertTextField.text=item.title
+                textField=alertTextField
+            }
+            
+            let action=UIAlertAction(title: "Save", style: .default) { alert in
+                do{
+                    try self.realm.write {
+                        item.title=textField.text ?? item.title
+                    }
+                    self.tableView.reloadData()
+                }catch{
+                    print("Error editing Category:\(error)")
+                }
+                
+                
+            }
+            let cancel=UIAlertAction(title: "Cancel", style: .cancel) { alert in
+                onCancel()
+            }
+            alert.addAction(action)
+            alert.addAction(cancel)
+            present(alert, animated: true)
+            
+        }
+        
+    }
 }
+
+
 extension ToDoListViewController:UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("Search button clicked: \(searchBar.text ?? "")")
@@ -215,10 +263,6 @@ extension ToDoListViewController:UISearchBarDelegate{
                 searchBar.resignFirstResponder()
             }
         }
-        
-        
     }
-    
-    
 }
 
