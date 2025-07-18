@@ -1,0 +1,10 @@
+# Mark C++ files as vendored (ignored in language stats)
+*.cpp linguist-vendored
+*.h linguist-vendored
+
+# If there’s a folder (like 'vendor' or 'sdk') with C++ code
+/vendor/** linguist-vendored
+/sdk/** linguist-vendored
+
+# Optional: Explicitly set Swift as the dominant language
+*.swift linguist-language=Swift
