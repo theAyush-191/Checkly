@@ -1,29 +1,6 @@
-*.h linguist-detectable=false
-*.cc linguist-detectable=false
-*.cpp linguist-detectable=false
-*.kt linguist-detectable=false
-*.rb linguist-detectable=false
 *.swift linguist-detectable=true
-*.cmake linguist-detectable=false
-*.gradle linguist-detectable=false
-*.json linguist-detectable=false
 *.plist linguist-detectable=true
-*.html linguist-detectable=false
-*.xml linguist-detectable=false
-*.xib linguist-detectable=false
-*.storyboard linguist-detectable=false
-*.manifest linguist-detectable=false
-*.entitlements linguist-detectable=false
-*..properties linguist-detectable=false
 *.xc* linguist-detectable=true
-Podfile linguist-detectable=false
-CMakeLists.txt linguist-detectable=false# Mark C++ files as vendored (ignored in language stats)
-*.cpp linguist-vendored
-*.h linguist-vendored
-
-# If there’s a folder (like 'vendor' or 'sdk') with C++ code
-/vendor/** linguist-vendored
-/sdk/** linguist-vendored
 
 # Optional: Explicitly set Swift as the dominant language
 *.swift linguist-language=Swift
